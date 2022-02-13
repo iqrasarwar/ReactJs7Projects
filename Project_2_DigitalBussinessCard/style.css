@@ -1,0 +1,115 @@
+
+.desc,.info{
+   background-color: #ffffff;
+   font-family: 'Chakra Petch', sans-serif;
+   text-align: center;
+   color: #2B283A;
+   display:flex;
+   font-weight: bold;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width:350px;
+   height: auto;
+   margin:auto;
+}
+.info--img
+{
+   width: 350px;
+   height: 280px;
+   margin:auto;
+   background: url("./images/dp.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 10px 10px 0px 0px;
+}
+.info--name{
+   font-weight: bolder;
+   margin-block:10px;
+   font-size: larger;
+}
+.info--icon
+{
+   width:15px;
+   height:15px;
+   margin-right: 7px;
+}
+.info-btn
+{
+   padding: 5px 13px;
+   width: 115px;
+   height: 34px;
+   box-sizing: border-box;
+   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+   border-radius: 6px;
+}
+.info--email
+{
+   background: #FFFFFF;
+   border: 1px solid #D1D5DB;
+   margin-right: 40px;
+}
+.info--linkdin
+{
+   color:white;
+   background: #297FE5;
+   border:none;
+}
+.info--buttons,.info-btn{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+body{
+   background-color: #2B283A;
+}
+.info--desig
+{
+   font-size: 12.8px;
+   margin-block:0px;
+   color: #F47D27;
+}
+.info--website
+{
+   font-size: 10.24px;
+   margin-block:7px;
+   color: #4A4E74;
+}
+.descH
+{
+   text-align: left;
+   font-size: 16px;
+   font-weight: bolder;
+   color: #2B283A;
+   margin-block:15px;
+}
+.text
+{
+   text-align: left;
+   width: 247px;
+   height: 55px;
+   font-size: 10.24px;
+   color: #4A4E74;
+}
+footer{
+   background-color: #d8e2df;
+   display:flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   width:350px;
+   height: auto;
+   margin:auto;
+   padding-block: 10px;
+   border-radius: 0px 0px 10px 10px;
+}
+a{
+   text-decoration: none;
+}
+.info--email a{
+   color: #2B283A;
+}
+.info--linkdin a{
+   color: white;
+}
