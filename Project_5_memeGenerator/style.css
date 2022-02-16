@@ -1,0 +1,99 @@
+html,body{
+   margin: 0;
+   padding: 0;
+}
+.nav--bar{
+   background-color: blue;
+   display: flex;
+   flex-direction: row;
+   color: aliceblue;
+   font-weight: bolder;
+   font-size: 25;
+   align-items: center;
+   padding:90px;
+   padding-block: 0px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav--img{
+   max-height: 55px;
+   max-width: 70%;
+   margin-right: 20px;
+}
+main {
+   padding: 36px;
+}
+.nav--title{
+   font-size: 30;
+   margin-right: 60%;
+}
+
+.form {
+   display: grid;
+   grid-template: 60px 60px / 1fr 1fr;
+   gap: 17px;
+   margin-bottom: 17px;
+}
+
+.form--input {
+   border-radius: 5px;
+   border: 1px solid #D5D4D8;
+   text-indent: 5px;
+}
+
+.form--button {
+   grid-column: 1 / -1;
+   font-family: "Karla", sans-serif;
+   border-radius: 5px;
+   background: linear-gradient(90.41deg, blue 1.14%, #A818DA 100%);
+   color: white;
+   border: none;
+   cursor: pointer;
+   height: 60px;
+}
+
+.meme {
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.meme--image {
+   max-width: 80vh;
+   max-height: 80vh;
+   border-radius: 3px;
+   border:1px solid blue;
+}
+
+.meme--text {
+   position: absolute;
+   width: 80%;
+   text-align: center;
+   left: 50%;
+   transform: translateX(-50%);
+   margin: 15px 0;
+   padding: 0 5px;
+   font-family: impact, sans-serif;
+   font-size: 2em;
+   text-transform: uppercase;
+   color: white;
+   letter-spacing: 1px;
+   text-shadow:
+       2px 2px 0 #000,
+       -2px -2px 0 #000,
+       2px -2px 0 #000,
+       -2px 2px 0 #000,
+       0 2px 0 #000,
+       2px 0 0 #000,
+       0 -2px 0 #000,
+       -2px 0 0 #000,
+       2px 2px 5px #000;
+}
+
+.bottom {
+   bottom: 0;
+}
+
+.top {
+   top: 0;
+}
