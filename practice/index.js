@@ -348,73 +348,137 @@
 // // let root = document.getElementById("root");
 // // ReactDOM.render(funFacts,root);
 
-let boxes= [
+// let boxes= [
+//     {
+//         id: 1,
+//         on: true
+//     },
+//     {
+//         id: 2,
+//         on: false
+//     },
+//     {
+//         id: 3,
+//         on: true
+//     },
+//     {
+//         id: 4,
+//         on: true
+//     },
+//     {
+//         id: 5,
+//         on: false
+//     },
+//     {
+//         id: 6,
+//         on: false
+//     },
+// ]
+
+// //  TOGGGLE APP
+// function Box(props) {
+//     const styles = {
+//         backgroundColor: props.on ? "#222222" : "transparent"
+//     }
+
+//     return (
+//         <div
+//             style={styles}
+//             className="box"
+//             onClick={props.toggle}
+//         >
+//         </div>
+//     )
+// }
+// function App() {
+//     const [squares, setSquares] = React.useState(boxes)
+
+//     function toggle(id) {
+//         setSquares(prevSquares => {
+//             return prevSquares.map((square) => {
+//                 return square.id === id ? {...square, on: !square.on} : square
+//             })
+//         })
+//     }
+
+//     const squareElements = squares.map(square => (
+//         <Box
+//             key={square.id}
+//             on={square.on}
+//             toggle={() => toggle(square.id)}
+//         />
+//     ))
+
+//     return (
+//         <main>
+//             {squareElements}
+//         </main>
+//     )
+// }
+
+
+// ReactDOM.render(<App />, document.getElementById("root"))
+
+let jokesData = [
     {
         id: 1,
-        on: true
+        setup: "I got my daughter a fridge for her birthday.",
+        punchline: "I can't wait to see her face light up when she opens it."
     },
     {
         id: 2,
-        on: false
+        setup: "How did the hacker escape the police?",
+        punchline: "He just ransomware!"
     },
     {
         id: 3,
-        on: true
+        setup: "Why don't pirates travel on mountain roads?",
+        punchline: "Scurvy."
     },
     {
         id: 4,
-        on: true
+        setup: "Why do bees stay in the hive in the winter?",
+        punchline: "Swarm."
     },
     {
         id: 5,
-        on: false
-    },
-    {
-        id: 6,
-        on: false
-    },
-]
-
-//  TOGGGLE APP
-function Box(props) {
-    const styles = {
-        backgroundColor: props.on ? "#222222" : "transparent"
+        setup: "What's the best thing about Switzerland?",
+        punchline: "I don't know, but the flag is a big plus!"
     }
+]
+function Joke(props)
+{
+    const [isShown, setIsShown] = React.useState(false)
 
+    function toogleIsShown(){
+        console.log(isShown)
+        setIsShown(prevShown => !prevShown)
+    }
     return (
-        <div
-            style={styles}
-            className="box"
-            onClick={props.toggle}
-        >
+        <div>
+            {props.setup && <h3>{props.setup}</h3>}
+            <p>{props.punchline}</p>
+            <button onClick={toogleIsShown}>show</button>
+            <hr />
         </div>
     )
 }
-function App() {
-    const [squares, setSquares] = React.useState(boxes)
-
-    function toggle(id) {
-        setSquares(prevSquares => {
-            return prevSquares.map((square) => {
-                return square.id === id ? {...square, on: !square.on} : square
-            })
-        })
-    }
-
-    const squareElements = squares.map(square => (
-        <Box
-            key={square.id}
-            on={square.on}
-            toggle={() => toggle(square.id)}
-        />
-    ))
-
+ function App() {
+    const jokeElements = jokesData.map(joke => {
+        return (
+            <Joke
+                key={joke.id}
+                setup={joke.setup}
+                punchline={joke.punchline}
+            />
+        )
+    })
     return (
-        <main>
-            {squareElements}
-        </main>
+        <div>
+            {jokeElements}
+        </div>
     )
 }
 
-
 ReactDOM.render(<App />, document.getElementById("root"))
+
